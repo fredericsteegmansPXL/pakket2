@@ -25,38 +25,33 @@ export default {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/shared.scss";
 
 footer {
   background-color: #111;
   padding: 2rem 0.5rem;
-}
-
-footer .footer__container {
-  max-width: 75rem;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-footer .footer__container .footer__container__map {
-  flex: auto;
-}
-
-footer .footer__container .footer__container__adress {
-  flex: auto;
-}
-
-footer .footer__container .footer__container__adress h1 {
-  text-align: right;
-  color: #07ff4d;
-}
-
-footer .footer__container .footer__container__adress p {
-  text-align: right;
-  color: #ffffff;
-  padding: 0.5rem 0;
+  .footer__container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .footer__container .footer__container__map {
+    flex: auto;
+  }
+  .footer__container .footer__container__adress {
+    flex: auto;
+    h1 {
+      text-align: right;
+      color: $green;
+    }
+    p {
+      text-align: right;
+      color: #ffffff;
+      padding: 0.5rem 0;
+    }
+  }
 }
 
 </style>

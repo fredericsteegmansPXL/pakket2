@@ -12,27 +12,25 @@ export default {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/shared.scss";
 
 #top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    border: 3px solid $green;
+    background-color: rgba(255, 255, 255, 0);
+    color: $green;
+    border-radius: 10px;
+    &:hover {
+      color: #ffffff;
+      background-color: $green;
+    }
+  }
 }
-
-#top a {
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  font-size: 1.5rem;
-  border: 3px solid #07ff4d;
-  background-color: rgba(255, 255, 255, 0);
-  color: #07ff4d;
-}
-
-#top a:hover {
-  color: #ffffff;
-  background-color: #07ff4d;
-}
-
 </style>

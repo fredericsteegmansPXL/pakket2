@@ -16,7 +16,7 @@ export default {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/shared.scss";
 
 header .header__container {
@@ -27,25 +27,21 @@ header .header__container {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 18rem 0;
-
+  h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0.5rem;
+    font-size: 5rem;
+    border-radius: 10px 10px 0 10px;
+  }
+  h2 {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: $green;
+    font-size: 1.25rem;
+    border-radius: 0 0 10px 10px;
+  }
 }
-
-header .header__container h1 {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 0.5rem;
-  font-size: 5rem;
-  border-radius: 10px 10px 0 10px;
-}
-
-header .header__container h2 {
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.65);
-  color: #07ff4d;
-  font-size: 1.25rem;
-  border-radius: 0 0 10px 10px;
-}
-
 h1, h2 {
   margin: 0;
 }
