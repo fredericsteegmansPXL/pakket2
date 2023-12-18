@@ -11,11 +11,11 @@
 
   <nav>
     <div class="nav__container">
-      <h1><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></h1>
+      <h1><a href="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></a></h1>
       <ul>
-        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="/favoriet"><i class="fa-solid fa-heart"></i></a></li>
+        <li><a href="/favoriet"><i class="fa-solid fa-heart"></i></a></li>
+        <li><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -43,18 +43,23 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    h1 {
-      color: #fff;
-      font-size: 3rem;
-      font-family: Saira, sans-serif;
-      margin: 1rem 0.5rem;
-      span {
-        color: $green;
-      }
-      i {
-        color: $green;
-      }
     }
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-family: Saira, sans-serif;
+    margin: 1rem 0.5rem;
+    a {
+      text-decoration: none;
+      color: white;
+      }
+    span {
+      color: $green;
+    }
+    i {
+      color: $green;
+    }
+  }
     ul {
       list-style-type: none;
       display: flex;
@@ -69,6 +74,6 @@ nav {
         }
       }
     }
-  }
+
 }
 </style>
