@@ -27,7 +27,7 @@
   margin: 0 auto;
   display: flex;justify-content: space-between;
   padding: 0.5rem 2rem;
-  background-color: #111111;
+  background-color: $bg;
   p{
     color: #ffffff;
   }
@@ -37,7 +37,7 @@
 }
 
 nav {
-  background-color: #111111;
+  background-color: $bg;
   .nav__container {
     max-width: 75rem;
     margin: 0 auto;
