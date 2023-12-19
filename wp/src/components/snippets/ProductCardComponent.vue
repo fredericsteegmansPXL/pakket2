@@ -1,7 +1,7 @@
 <script>
 export default {
   name: "ProductsCardComponent",
-  props: ["titel", "prijs", "afbeelding" ]
+  props: ["titel", "prijs", "afbeelding", "id" ]
 }
 </script>
 
@@ -17,9 +17,9 @@ export default {
       <p>
         {{ "◊ " + prijs }}
       </p>
-      <p>
-        See more
-      </p>
+      <router-link :to="'/products/' + id">
+        <p>See more</p>
+      </router-link>
     </div>
   </article>
 </template>

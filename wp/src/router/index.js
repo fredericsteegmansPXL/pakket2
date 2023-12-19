@@ -6,6 +6,7 @@ import AboutView from '@/views/AboutView.vue'
 import ContactView from '@/views/ContactView.vue'
 import FavoriteView from '@/views/FavoriteView.vue'
 import ProfileView from '@/views/ProfileView.vue'
+import ProductDetailView from "@/views/ProductDetailView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,10 @@ const router = createRouter({
         {
             path: '/products',
             component: ProductsView
+        },
+        {
+            path: '/products/:id',
+            component: ProductDetailView
         },
         {
             path: '/cart',
