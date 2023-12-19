@@ -15,9 +15,9 @@ const names = getProductsInCart.value.map((product) => ({name: product.titel}))
 // example reroute on not logged in
 const auth = useAuthStore()
 const router = useRouter()
-// if (!auth.loggedIn) {
-//   router.push('profiel')
-// }
+if (!auth.loggedIn) {
+router.push('profiel')
+}
 </script>
 
 <template>
