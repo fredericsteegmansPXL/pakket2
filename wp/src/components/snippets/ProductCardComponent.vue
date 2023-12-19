@@ -1,11 +1,11 @@
 <script setup>
-import {computed} from 'vue'
+import { computed } from 'vue'
 import { useSpaceShipStore } from '@/stores/spaceShipStore.js';
 import { useAuthStore } from '@/stores/auth.js';
 
 const spaceShipStore = useSpaceShipStore()
 const auth = useAuthStore()
-const props = defineProps(  ["titel", "prijs", "afbeelding", "id" ])
+defineProps(  ["titel", "prijs", "afbeelding", "id" ])
 </script>
 
 <template>
