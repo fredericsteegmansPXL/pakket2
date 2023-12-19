@@ -25,7 +25,7 @@ export default {
   <div class="new">
     <h1>EMPIRIAL TIE FIGHTER</h1>
     <p>fast, agile, deadly</p>
-    <a href="/products"><button>shop now</button></a>
+    <router-link to="/products"><button>shop now</button></router-link>
   </div>
   <div class="topnew">
     <h2>// NEW //</h2>
