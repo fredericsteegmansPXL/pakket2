@@ -11,11 +11,11 @@
 
   <nav>
     <div class="nav__container">
-      <h1><a href="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></a></h1>
+      <h1><router-link to="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></router-link></h1>
       <ul>
-        <li><a href="/favoriet" class="router-link-active"><i class="fa-solid fa-heart"></i></a></li>
-        <li><a href="/cart" class="router-link-active"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li><a href="/profiel" class="router-link-active"><i class="fa-solid fa-user"></i></a></li>
+        <li><router-link to="/favoriet" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-heart"></i></router-link></li>
+        <li><router-link to="/cart" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-cart-shopping"></i></router-link></li>
+        <li><router-link to="/profiel" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-user"></i></router-link></li>
       </ul>
     </div>
   </nav>
@@ -72,11 +72,11 @@ nav {
         &:hover {
           color: $green;
         }
-        router-link-active{
-          color: $green;
-        }
+      }
+      .router-link-active{
+        color: $green;
       }
     }
-
 }
+
 </style>
