@@ -6,17 +6,17 @@ export default {
   props: ["product"],
   data() {
     return {
-      product: producten.filter(p => p.id==this.$route.params.id)[0]
+      product: producten.filter(p => p.id===this.$route.params.id)[0]
     }
-  }
+  },
 }
 
 </script>
 
 <template>
-<div>
-  {{ product.prijs }}
-</div>
+  <div>
+    {{ product.prijs }}
+  </div>
 </template>
 
 

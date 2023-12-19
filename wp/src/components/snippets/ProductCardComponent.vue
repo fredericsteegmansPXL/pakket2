@@ -1,8 +1,11 @@
-<script>
-export default {
-  name: "ProductsCardComponent",
-  props: ["titel", "prijs", "afbeelding", "id" ]
-}
+<script setup>
+import {computed} from 'vue'
+import { useSpaceShipStore } from '@/stores/spaceShipStore.js';
+import { useAuthStore } from '@/stores/auth.js';
+
+const spaceShipStore = useSpaceShipStore()
+const auth = useAuthStore()
+const props = defineProps(  ["titel", "prijs", "afbeelding", "id" ])
 </script>
 
 <template>
@@ -11,8 +14,18 @@ export default {
       <div class="img_space">
         <img :src="afbeelding" alt="f">
       </div>
+      <div v-if="!auth.loggedIn">
+        <button
+            @click="spaceShipStore.addToCart(id)">Add to cart
+        </button>
+        <button
+            @click="spaceShipStore.removeFromCart(id)">remove from cart
+        </button>
+      </div>
+
+
       <p class="heading">
-        {{ titel }}
+        {{ titel }} - {{ id }}
       </p>
       <p>
         {{ "◊ " + prijs }}

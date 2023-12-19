@@ -1,4 +1,7 @@
 <script setup>
+import { useSpaceShipStore } from '@/stores/spaceShipStore.js';
+const spaceShipStore = useSpaceShipStore()
+
 
 </script>
 
@@ -14,7 +17,7 @@
       <h1><router-link to="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></router-link></h1>
       <ul>
         <li><router-link to="/favoriet" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-heart"></i></router-link></li>
-        <li><router-link to="/cart" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-cart-shopping"></i></router-link></li>
+        <li><router-link to="/cart" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-cart-shopping"><span>{{ spaceShipStore.getCartCount }}</span></i></router-link></li>
         <li><router-link to="/profiel" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-user"></i></router-link></li>
       </ul>
     </div>
@@ -43,7 +46,7 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    }
+  }
   h1 {
     color: #fff;
     font-size: 3rem;
@@ -52,7 +55,7 @@ nav {
     a {
       text-decoration: none;
       color: white;
-      }
+    }
     span {
       color: $green;
     }
@@ -60,23 +63,24 @@ nav {
       color: $green;
     }
   }
-    ul {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-      li a {
-        display: inline-block;
-        color: #ffffff;
-        font-size: 1.5rem;
-        padding: 1rem 0.5rem;
-        &:hover {
-          color: $green;
-        }
-      }
-      .router-link-active{
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    li a {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 1.5rem;
+      padding: 1rem 0.5rem;
+      &:hover {
         color: $green;
       }
     }
+    .router-link-active{
+      color: $green;
+    }
+  }
 }
 
 </style>
+

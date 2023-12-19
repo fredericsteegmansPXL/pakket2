@@ -1,111 +1,122 @@
 [
-    {
-      "id": 1,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-
-    {
-      "id": 2,
-      "titel": "Identified Flying Object",
-      "prijs": 12670,
-      "afbeelding": "../../public/ufo.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 3,
-      "titel": "TIE-Fighter",
-      "prijs": 12670,
-      "afbeelding": "../../public/TIE_Fighter_DICE.webp",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 4,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 5,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 6,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 7,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-        "filter": "goedkoop"
-    },
-    {
-      "id": 8,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 9,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 10,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 11,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    },
-    {
-      "id": 12,
-      "titel": "GHAERBIDGKEN",
-      "prijs": 12670,
-      "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
-      "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
-      "voorraad": 50,
-      "filter": "goedkoop"
-    }
-  ]
+  {
+    "id": 1,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "duur",
+    "color": "black"
+  },
+  {
+    "id": 2,
+    "titel": "Identified Flying Object",
+    "prijs": 12670,
+    "afbeelding": "../../public/ufo.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "fuckingduur",
+    "color": "red"
+  },
+  {
+    "id": 3,
+    "titel": "TIE-Fighter",
+    "prijs": 12670,
+    "afbeelding": "../../public/TIE_Fighter_DICE.webp",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 4,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 5,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 6,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 7,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 8,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 9,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 10,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 11,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  },
+  {
+    "id": 12,
+    "titel": "GHAERBIDGKEN",
+    "prijs": 12670,
+    "afbeelding": "../../public/spaceship1Asset-1-496x300.png",
+    "omschrijving": "Overpriced? Maybe. Can you find it anywhere else in the galaxy? No way, José. This badboy makes you look like an absolute nobody. Most bad guys won't even bother you. But if they do, oh baby, they are in for trouble... ",
+    "voorraad": 50,
+    "filter": "goedkoop",
+    "color": "blue"
+  }
+]
