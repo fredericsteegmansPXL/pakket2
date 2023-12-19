@@ -14,8 +14,8 @@
       <h1><a href="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></a></h1>
       <ul>
         <li><a href="/favoriet"><i class="fa-solid fa-heart"></i></a></li>
-        <li><a href="/favoriet"><i class="fa-solid fa-heart"></i></a></li>
         <li><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="/profiel"><i class="fa-solid fa-user"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -69,7 +69,7 @@ nav {
         color: #ffffff;
         font-size: 1.5rem;
         padding: 1rem 0.5rem;
-        &:hover {
+        &:hover, .router-link-active {
           color: $green;
         }
       }
