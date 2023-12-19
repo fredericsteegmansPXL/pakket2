@@ -171,7 +171,7 @@ main {
   border-radius: 8px;
   cursor: pointer;
   color: $bg;
-  margin: 2rem .5rem;
+  margin: 3rem .5rem;
   .heading {
     font-size: 20px;
     text-transform: capitalize;
