@@ -1,34 +1,18 @@
-<script>
-export default {
-  data() {
-    return {
-      accountButtonText: 'Login',
-      loggedIn: false
-    }
-  },
+<script setup>
+import { useAuthStore } from '@/stores/auth.js';
 
-  name: "ProfileView",
+const auth = useAuthStore()
 
-  methods: {
-    submitForm() {
-      this.accountButtonText = "Logout";
-      this.loggedIn = true;
-    },
-    logout() {
-      this.accountButtonText = "Login";
-      this.loggedIn = false;
-    }
-  }
-}
+
 </script>
 
 <template>
 
 
   <section>
-    <div class="form-container" v-if="!loggedIn">
+    <div class="form-container" v-if="!auth.loggedIn">
       <h1>Login</h1>
-      <form class="loginForm" v-on:submit.prevent="submitForm()" action="">
+      <form class="loginForm" v-on:submit.prevent="auth.login()" action="">
         <div class="form-row">
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email">
@@ -38,14 +22,14 @@ export default {
           <input type="password" name="password" id="password">
         </div>
         <div class="form-action">
-          <button class="button button-primary" type="submit">{{ accountButtonText }}</button>
+          <button class="button button-primary" type="submit">{{ !auth.loggedIn && "Log in"}}</button>
         </div>
       </form>
     </div>
     <div class="container" v-else>
       <h1>Welkom!</h1>
       <p>Je bent succesvol ingelogd!</p>
-      <button v-on:click="logout()" type="button" class="button button-secondary">{{ accountButtonText }}</button>
+      <button v-on:click="auth.logout()" type="button" class="button button-secondary">{{ auth.loggedIn && "Logout" }}</button>
     </div>
   </section>
 
