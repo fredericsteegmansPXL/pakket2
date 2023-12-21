@@ -16,7 +16,6 @@ const spaceShipStore = useSpaceShipStore()
     <div class="nav__container">
       <h1><router-link to="/"><span>STAR</span>DUST <i class="fa-brands fa-galactic-republic"></i></router-link></h1>
       <ul>
-        <li><router-link to="/favoriet" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-heart"></i></router-link></li>
         <li><router-link to="/cart" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-cart-shopping"><span>{{ spaceShipStore.getCartCount }}</span></i></router-link></li>
         <li><router-link to="/profiel" v-slot="{isActive}" :class="[isActive && 'router-link-active']"><i class="fa-solid fa-user"></i></router-link></li>
       </ul>

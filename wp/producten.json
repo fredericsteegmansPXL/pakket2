@@ -99,7 +99,6 @@
   "color": "blue",
   "btw": 21
 },
-
   {
   "id": 10,
   "titel": "Cosmic Party Paddler",
@@ -111,6 +110,7 @@
   "color": "white",
   "btw": 21
   },
+
   {
   "id": 11,
   "titel": "IFO V8",
@@ -247,7 +247,7 @@
     "id": 23,
     "titel": "Quantum Quencher",
     "prijs": 40000,
-    "afbeelding": "../../public/ss22.png",
+    "afbeelding": "../../public/ss23.png",
     "omschrijving": "Introducing the Quantum Quencher – a beverage that transcends the ordinary and defies the laws of flavor! Bursting with exotic essences from distant planets, each sip is a journey through taste dimensions. Served in a levitating cup, the Quantum Quencher is the epitome of liquid innovation, bringing a splash of intergalactic refreshment to your terrestrial taste buds. Say goodbye to mundane drinks and dive into the extraordinary with the Quantum Quencher – where refreshment reaches new heights, literally!",
     "voorraad": 50,
     "filter": "cheap",

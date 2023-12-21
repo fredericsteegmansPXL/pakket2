@@ -18,7 +18,7 @@ const auth = useAuthStore()
           <input type="email" name="email" id="email">
         </div>
         <div class="form-row">
-          <label for="password">Wachtwoord</label>
+          <label for="password">Password</label>
           <input type="password" name="password" id="password">
         </div>
         <div class="form-action">
@@ -27,9 +27,11 @@ const auth = useAuthStore()
       </form>
     </div>
     <div class="container" v-else>
-      <h1>Welkom!</h1>
-      <p>Je bent succesvol ingelogd!</p>
+      <h1>Greetings, creature!</h1>
+      <p>You have successfully logged in!</p>
       <button v-on:click="auth.logout()" type="button" class="button button-secondary">{{ auth.loggedIn && "Logout" }}</button>
+      <p>or</p>
+      <router-link to="/cart"><button class="button button-tertiary">view cart</button></router-link>
     </div>
   </section>
 
@@ -70,6 +72,16 @@ const auth = useAuthStore()
 .button-secondary:hover {
   background-color: $bg;
   color: #EBEBEB;
+}
+
+.button-tertiary {
+  background-color: $bg;
+  color: $white;
+}
+
+.button-tertiary:hover {
+  background-color: $white;
+  color: $bg;
 }
 
 .button-primary {
