@@ -25,7 +25,7 @@ defineProps(  ["titel", "prijs", "afbeelding", "id" ])
 
 
       <p class="heading">
-        {{ titel }} - {{ id }}
+        {{ titel }}
       </p>
       <p>
         {{ "◊ " + prijs }}
