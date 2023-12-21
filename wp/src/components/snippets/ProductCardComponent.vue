@@ -14,14 +14,6 @@ defineProps(  ["titel", "prijs", "afbeelding", "id" ])
       <div class="img_space">
         <img :src="afbeelding" alt="f">
       </div>
-      <div v-if="!auth.loggedIn">
-        <button
-            @click="spaceShipStore.addToCart(id)">Add to cart
-        </button>
-        <button
-            @click="spaceShipStore.removeFromCart(id)">remove from cart
-        </button>
-      </div>
 
 
       <p class="heading">
@@ -30,9 +22,13 @@ defineProps(  ["titel", "prijs", "afbeelding", "id" ])
       <p>
         {{ "◊ " + prijs }}
       </p>
-      <router-link :to="'/products/' + id">
+      <router-link to="'/products/:' + id" class="more">
         <p>See more</p>
       </router-link>
+      <div v-if="!auth.loggedIn">
+        <button @click="spaceShipStore.addToCart(id)" class="addcart">+</button>
+        <button @click="spaceShipStore.removeFromCart(id)" class="removecart">-</button>
+      </div>
     </div>
   </article>
 </template>
@@ -42,6 +38,30 @@ defineProps(  ["titel", "prijs", "afbeelding", "id" ])
 
 article {
   overflow: auto;
+  .addcart, .removecart{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.18);
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+    border-radius: 40%;
+    font-size: 12pt;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .addcart{
+    margin-right: 2.5rem;
+    &:hover{
+      background-color: $green;
+      color: $white;
+    }
+  }
+  .removecart{
+    &:hover{
+      background-color: #fd7878;
+      color: $white;
+    }
+  }
 }
 
 .img_space {
@@ -94,11 +114,16 @@ article img {
 .card p:last-child {
   color: #1CFF51FF;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .card:hover .img_space{
   opacity: 100%;
   transition: all 0.5s cubic-bezier(0.61, 1, 0.88, 1);
 
+}
+
+.more {
+  text-decoration: none;
 }
 </style>

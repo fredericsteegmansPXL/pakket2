@@ -62,8 +62,9 @@
 
 <template >
   <main>
-    <h1>Dit is de productpagina</h1>
-    <!-- price filter ex: goedkoop -->
+    <h1>Products</h1>
+
+    <div class="filt">
     <div>
       <select v-model="selectedPriceFilter">
         <option v-for="filter in priceFilter" :value="filter">{{filter}}</option>
@@ -77,13 +78,16 @@
       </select>
       <button @click="clearColorFilter">Clear color filter</button>
     </div>
+    </div>
 
     <section class="main__part1">
       <div class="container">
         <ProductsCardComponent v-for="product in paginatedProducts" :titel="product.titel" :afbeelding="product.afbeelding" :prijs="product.prijs" :id="product.id"/>
       </div>
     </section>
-    <p v-for="number in numberOfPages" @click="setCurrenPage(number)">{{ number + 1 }}</p>
+    <div class="pag">
+      <p v-for="number in numberOfPages" @click="setCurrenPage(number)">{{ number + 1 }}</p>
+    </div>
   </main>
 </template>
 
@@ -91,6 +95,21 @@
 @import "@/assets/shared.scss";
 main {
   background-color: $white;
+  h1{
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    font-size: 70pt;
+  }
+  .filt{
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    select{
+      padding: .2rem .3rem;
+      margin: .3rem .5rem;
+    }
+  }
 }
 
 .container {
@@ -106,6 +125,22 @@ main {
   .container  {
     flex-direction: column;
 
+  }
+}
+
+.pag {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem;
+  justify-content: center;
+  p{
+    margin-right: .5rem;
+    &:hover{
+      color: $green;
+      cursor: pointer;
+    }
   }
 }
 </style>

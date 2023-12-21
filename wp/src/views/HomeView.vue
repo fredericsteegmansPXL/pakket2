@@ -106,7 +106,7 @@ export default {
       cursor: pointer;
     }
   }
-  background-image: url("../public/TIE_Fighter_DICE.webp");
+  background-image: url("../../public/ss7.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40%;
@@ -115,7 +115,6 @@ export default {
 
 .uitgelicht{
   height: 800px;
-  border: solid 2px red;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -141,7 +140,6 @@ export default {
   .primate, .cruisers{
     width: 50%;
     height: 50%;
-    border: 2px solid yellow;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
