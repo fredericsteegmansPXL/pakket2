@@ -1,5 +1,5 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 import Footer from "@/components/Footer.vue";
 import Top from "@/components/Top.vue";
 
@@ -8,25 +8,22 @@ export default {
     HelloWorld,
     Footer,
     Top
-  },
-}
-
+  }
+};
 </script>
 
 <template>
-<body>
-<main>
-  <HelloWorld></HelloWorld>
-  <router-view></router-view>
-</main>
-<Footer></Footer>
-<Top></Top>
-</body>
-
+  <body>
+    <main>
+      <HelloWorld></HelloWorld>
+      <router-view></router-view>
+    </main>
+    <Footer></Footer>
+    <Top></Top>
+  </body>
 </template>
 
-
-<style lang="scss" >
+<style lang="scss">
 @import "@/assets/shared.scss";
 * {
   margin: 0;
@@ -35,7 +32,7 @@ export default {
   font-family: Ubuntu, sans-serif;
 }
 body {
-  background-image: url("../public/casey-horner-RmoWqDCqN2E-unsplash.jpg");
+  background-image: url("/casey-horner-RmoWqDCqN2E-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -1,12 +1,12 @@
 <script>
-import Header from '@/components/Header.vue'
+import Header from "@/components/Header.vue";
 
 export default {
   name: "HomeView",
   components: {
-    Header,
+    Header
   }
-}
+};
 </script>
 
 <template>
@@ -57,7 +57,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 @import "@/assets/shared.scss";
 .topnew {
   height: 30px;
@@ -79,7 +79,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
-  h1{
+  h1 {
     color: $white;
     font-size: 60pt;
     text-shadow: rgba(6, 17, 6, 0.91) 2px 0 10px;
@@ -99,21 +99,20 @@ export default {
     margin-top: 2rem;
     border-radius: 5px;
     transition: all 0.5s cubic-bezier(0.61, 1, 0.88, 1);
-    &:hover{
+    &:hover {
       background-color: white;
       color: black;
       transition: all 0.5s cubic-bezier(0.61, 1, 0.88, 1);
       cursor: pointer;
     }
   }
-  background-image: url("../../public/ss7.png");
+  background-image: url("/ss7.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 40%;
 }
 
-
-.uitgelicht{
+.uitgelicht {
   height: 800px;
   display: flex;
   flex-flow: row wrap;
@@ -128,7 +127,7 @@ export default {
     font-family: "Helvetica Neue", sans-serif;
     padding-top: 2rem;
   }
-  div{
+  div {
     border: $bg solid 8px;
   }
   button {
@@ -147,7 +146,8 @@ export default {
       cursor: pointer;
     }
   }
-  .primate, .cruisers{
+  .primate,
+  .cruisers {
     width: 50%;
     height: 50%;
     display: flex;
@@ -155,32 +155,30 @@ export default {
     justify-content: center;
     align-items: center;
   }
-  .primate{
-    background-image: url("../../public/cover1.jpg");
+  .primate {
+    background-image: url("/cover1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
   }
   .cruisers {
-    background-image: url("../../public/cover5.jpg");
+    background-image: url("/cover5.jpg");
     background-repeat: no-repeat;
     background-position: center;
 
     background-size: 100%;
   }
-  .parts{
+  .parts {
     width: 100%;
     height: 50%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background-image: url("../../public/cover3.jpg");
+    background-image: url("/cover3.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
   }
-
 }
-
 </style>

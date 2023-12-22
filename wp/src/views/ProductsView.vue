@@ -1,92 +1,112 @@
 <script>
-  import producten from "../../producten.json";
-  import ProductsCardComponent from "@/components/snippets/ProductCardComponent.vue";
-  export default {
+import producten from "../../producten.json";
+import ProductsCardComponent from "@/components/snippets/ProductCardComponent.vue";
+export default {
   name: "ProductsView",
-  components: {ProductsCardComponent},
-  data () {
-  return {
-  producten: producten,
-  selectedPriceFilter: '',
-  selectedColorFilter: '',
-  itemsPerPage: 6,
-  currentPage: 0,
-}
-},
+  components: { ProductsCardComponent },
+  data() {
+    return {
+      producten: producten,
+      selectedPriceFilter: "",
+      selectedColorFilter: "",
+      itemsPerPage: 6,
+      currentPage: 0
+    };
+  },
   methods: {
-  clearPriceFilter() {
-  this.selectedColorFilter = ''
-  this.selectedPriceFilter = ''
-},
-  clearColorFilter() {
-  this.selectedColorFilter = ''
-},
-  arrayRange (start, stop, step) {
-  return Array.from({length: (stop - start) / step + 1 }, (value, index) => start + index * step );
-},
-  setCurrenPage(page) {
-  this.currentPage = page
-}
-
-},
+    clearPriceFilter() {
+      this.selectedColorFilter = "";
+      this.selectedPriceFilter = "";
+    },
+    clearColorFilter() {
+      this.selectedColorFilter = "";
+    },
+    arrayRange(start, stop, step) {
+      return Array.from(
+        { length: (stop - start) / step + 1 },
+        (value, index) => start + index * step
+      );
+    },
+    setCurrenPage(page) {
+      this.currentPage = page;
+    }
+  },
   computed: {
-  priceFilter() {
-  return [...new Set(producten.map((prod) => prod.filter))]
-},
-  colorFilter() {
-  return [...new Set(producten.map((prod) => prod.color))]
-},
-  filteredProducts() {
-  let filteredProds = producten
-  if (this.selectedPriceFilter) {
-  filteredProds =  filteredProds.filter((prod) => prod.filter === this.selectedPriceFilter )
-}
+    priceFilter() {
+      return [...new Set(producten.map((prod) => prod.filter))];
+    },
+    colorFilter() {
+      return [...new Set(producten.map((prod) => prod.color))];
+    },
+    filteredProducts() {
+      let filteredProds = producten;
+      if (this.selectedPriceFilter) {
+        filteredProds = filteredProds.filter(
+          (prod) => prod.filter === this.selectedPriceFilter
+        );
+      }
 
-  if (this.selectedColorFilter) {
-  filteredProds = filteredProds.filter((prod) => prod.color === this.selectedColorFilter )
-}
-  return filteredProds
-},
-  paginatedProducts() {
-  const startIndex = Math.ceil((this.filteredProducts.length / this.itemsPerPage) * this.currentPage)
-  const endIndex = startIndex + this.itemsPerPage
-  return this.filteredProducts.slice(startIndex , endIndex)
-},
-  numberOfPages() {
-  const max = Math.floor(this.filteredProducts.length / this.itemsPerPage)
-  return this.arrayRange(0, max, 1);
-},
-}
-}
+      if (this.selectedColorFilter) {
+        filteredProds = filteredProds.filter(
+          (prod) => prod.color === this.selectedColorFilter
+        );
+      }
+      return filteredProds;
+    },
+    paginatedProducts() {
+      const startIndex = Math.ceil(
+        (this.filteredProducts.length / this.itemsPerPage) * this.currentPage
+      );
+      const endIndex = startIndex + this.itemsPerPage;
+      return this.filteredProducts.slice(startIndex, endIndex);
+    },
+    numberOfPages() {
+      const max = Math.floor(this.filteredProducts.length / this.itemsPerPage);
+      return this.arrayRange(0, max, 1);
+    }
+  }
+};
 </script>
 
-<template >
+<template>
   <main>
     <h1>Products</h1>
 
     <div class="filt">
-    <div>
-      <select v-model="selectedPriceFilter">
-        <option v-for="filter in priceFilter" :value="filter">{{filter}}</option>
-      </select>
-      <button @click="clearPriceFilter">Clear price filter</button>
-    </div>
-    <!-- color filter ex: blue -->
-    <div v-if="selectedPriceFilter">
-      <select v-model="selectedColorFilter">
-        <option v-for="filter in colorFilter" :value="filter">{{filter}}</option>
-      </select>
-      <button @click="clearColorFilter">Clear color filter</button>
-    </div>
+      <div>
+        <select v-model="selectedPriceFilter">
+          <option v-for="filter in priceFilter" :value="filter">
+            {{ filter }}
+          </option>
+        </select>
+        <button @click="clearPriceFilter">Clear price filter</button>
+      </div>
+      <!-- color filter ex: blue -->
+      <div v-if="selectedPriceFilter">
+        <select v-model="selectedColorFilter">
+          <option v-for="filter in colorFilter" :value="filter">
+            {{ filter }}
+          </option>
+        </select>
+        <button @click="clearColorFilter">Clear color filter</button>
+      </div>
     </div>
 
     <section class="main__part1">
       <div class="container">
-        <ProductsCardComponent v-for="product in paginatedProducts" :titel="product.titel" :afbeelding="product.afbeelding" :prijs="product.prijs" :id="product.id"/>
+        <ProductsCardComponent
+          v-for="product in paginatedProducts"
+          :titel="product.titel"
+          :afbeelding="product.afbeelding"
+          :prijs="product.prijs"
+          :id="product.id"
+        />
       </div>
     </section>
     <div class="pag">
-      <p v-for="number in numberOfPages" @click="setCurrenPage(number)">{{ number + 1 }}</p>
+      <p v-for="number in numberOfPages" @click="setCurrenPage(number)">
+        {{ number + 1 }}
+      </p>
     </div>
   </main>
 </template>
@@ -95,19 +115,19 @@
 @import "@/assets/shared.scss";
 main {
   background-color: $white;
-  h1{
+  h1 {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
     font-size: 70pt;
   }
-  .filt{
+  .filt {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    select{
-      padding: .2rem .3rem;
-      margin: .3rem .5rem;
+    select {
+      padding: 0.2rem 0.3rem;
+      margin: 0.3rem 0.5rem;
     }
   }
 }
@@ -118,13 +138,11 @@ main {
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto;
-
 }
 
 @media screen and (max-width: 700px) {
-  .container  {
+  .container {
     flex-direction: column;
-
   }
 }
 
@@ -135,9 +153,9 @@ main {
   margin: 0 auto;
   padding: 3rem;
   justify-content: center;
-  p{
-    margin-right: .5rem;
-    &:hover{
+  p {
+    margin-right: 0.5rem;
+    &:hover {
       color: $green;
       cursor: pointer;
     }
