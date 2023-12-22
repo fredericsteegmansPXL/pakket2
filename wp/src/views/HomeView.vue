@@ -40,18 +40,18 @@ export default {
   </div>
   <div class="uitgelicht">
     <div class="primate">
-      <h1>EMPIRIAL TIE FIGHTER</h1>
-      <p>fast, agile, deadly</p>
+      <h1>Luxury Transport</h1>
+      <p>Relax and enjoy.</p>
       <button>shop now</button>
     </div>
     <div class="cruisers">
-      <h1>EMPIRIAL TIE FIGHTER</h1>
-      <p>fast, agile, deadly</p>
+      <h1>Blackmatter</h1>
+      <p>Worth it.</p>
       <a href="/products"><button>shop now</button></a>
     </div>
     <div class="parts">
-      <h1>EMPIRIAL TIE FIGHTER</h1>
-      <p>fast, agile, deadly</p>
+      <h1>Parts</h1>
+      <p>Need extras?</p>
       <a href="/products"><button>shop now</button></a>
     </div>
   </div>
@@ -121,6 +121,16 @@ export default {
   align-items: center;
   background-color: #0e0e0e;
   color: white;
+  p {
+    color: $white;
+    font-size: 17pt;
+    font-weight: 100;
+    font-family: "Helvetica Neue", sans-serif;
+    padding-top: 2rem;
+  }
+  div{
+    border: $bg solid 8px;
+  }
   button {
     padding: 10px 30px;
     background-color: transparent;
@@ -145,6 +155,19 @@ export default {
     justify-content: center;
     align-items: center;
   }
+  .primate{
+    background-image: url("../../public/cover1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+  .cruisers {
+    background-image: url("../../public/cover5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-size: 100%;
+  }
   .parts{
     width: 100%;
     height: 50%;
@@ -152,6 +175,10 @@ export default {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    background-image: url("../../public/cover3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
   }
 
 }
