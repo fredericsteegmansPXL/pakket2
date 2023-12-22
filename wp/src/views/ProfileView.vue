@@ -17,11 +17,11 @@ const auth = useAuthStore()
       <form class="loginForm" v-on:submit.prevent="auth.login()" action="">
         <div class="form-row">
           <label for="email">E-mail</label>
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </div>
         <div class="form-row">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password">
+          <input type="password" name="password" id="password" required>
         </div>
         <div class="form-action">
           <button class="button button-primary" type="submit">{{ !auth.loggedIn && "Log in"}}</button>

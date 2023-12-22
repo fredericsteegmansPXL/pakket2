@@ -9,8 +9,9 @@ export default {
       producten: producten,
       selectedPriceFilter: "",
       selectedColorFilter: "",
-      itemsPerPage: 8,
-      currentPage: 0
+      itemsPerPage: 9,
+      currentPage: 0,
+      activePage: 0
     };
   },
   methods: {
@@ -29,13 +30,29 @@ export default {
     },
     setCurrenPage(page) {
       this.currentPage = page;
+    },
+    setCurrenPage(page) {
+      this.currentPage = page;
+      this.activePage = page;
     }
   },
   computed: {
     priceFilter() {
-      return [...new Set(producten.map((prod) => prod.filter))];
+
+      const orderedFilters = ['cheap', 'not cheap', 'I come from a diamond planet'];
+
+      return orderedFilters.filter(filter => this.uniqueFilters.includes(filter));
     },
     colorFilter() {
+
+      const orderedFilters = ['black', 'blue', 'brown', 'grey', 'orange', 'purple', 'white'];
+
+      return orderedFilters.filter(color => this.uniqueColors.includes(color));
+    },
+    uniqueFilters() {
+      return [...new Set(producten.map((prod) => prod.filter))];
+    },
+    uniqueColors() {
       return [...new Set(producten.map((prod) => prod.color))];
     },
     filteredProducts() {
@@ -54,9 +71,7 @@ export default {
       return filteredProds;
     },
     paginatedProducts() {
-      const startIndex = Math.ceil(
-        (this.filteredProducts.length / this.itemsPerPage) * this.currentPage
-      );
+      const startIndex = this.currentPage * this.itemsPerPage;
       const endIndex = startIndex + this.itemsPerPage;
       return this.filteredProducts.slice(startIndex, endIndex);
     },
@@ -75,16 +90,18 @@ export default {
     <div class="filt">
       <div>
         <select v-model="selectedPriceFilter">
-          <option v-for="filter in priceFilter" :value="filter">
+          <option value="">Select Price Filter</option>
+          <option v-for="filter in priceFilter" :value="filter" :key="filter">
             {{ filter }}
           </option>
         </select>
         <button @click="clearPriceFilter">Clear price filter</button>
       </div>
 
-      <div v-if="selectedPriceFilter">
+      <div>
         <select v-model="selectedColorFilter">
-          <option v-for="filter in colorFilter" :value="filter">
+          <option value="">Select Color Filter</option>
+          <option v-for="filter in colorFilter" :value="filter" :key="filter">
             {{ filter }}
           </option>
         </select>
@@ -95,16 +112,18 @@ export default {
     <section class="main__part1">
       <div class="container">
         <ProductsCardComponent
-          v-for="product in paginatedProducts"
-          :titel="product.titel"
-          :afbeelding="product.afbeelding"
-          :prijs="product.prijs"
-          :id="product.id"
+            v-for="product in paginatedProducts"
+            :key="product.id"
+            :titel="product.titel"
+            :afbeelding="product.afbeelding"
+            :prijs="product.prijs"
+            :id="product.id"
         />
       </div>
     </section>
+
     <div class="pag">
-      <p v-for="number in numberOfPages" @click="setCurrenPage(number)">
+      <p v-for="number in numberOfPages" :key="number" @click="setCurrenPage(number)" :class="{ 'active': number === activePage }">
         {{ number + 1 }}
       </p>
     </div>
@@ -158,6 +177,10 @@ main {
     &:hover {
       color: $green;
       cursor: pointer;
+    }
+    &.active {
+      text-decoration: underline $green;
+      color: $green;
     }
   }
 }
