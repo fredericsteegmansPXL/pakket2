@@ -9,7 +9,7 @@
   producten: producten,
   selectedPriceFilter: '',
   selectedColorFilter: '',
-  itemsPerPage: 24,
+  itemsPerPage: 6,
   currentPage: 0,
 }
 },
