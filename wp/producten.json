@@ -14,7 +14,7 @@
     "id": 2,
     "titel": "Millennium Falcon",
     "prijs": 40000,
-    "afbeelding": "../../public/ss2.png",
+    "afbeelding": "/ss2.png",
     "omschrijving": "Buckle up for a wild ride through the cosmos with our Millennium Falcon! Crafted with more love than a Wookiee hug, this hunk of junk is a must-have for any bounty hunter that is more being hunted than actually hunting. Illuminated hyperdrive? Check. Dynamic display stand? Double-check. Chess? You bet! So, grab your blaster, cancel your plans with the Dark Side, and buy this old-timing beast. It's time to bring home the Falcon – because parsing parsecs is passé; we deal in parsecs of pure interstellar awesomeness!",
     "voorraad": 22,
     "filter": "cheap",

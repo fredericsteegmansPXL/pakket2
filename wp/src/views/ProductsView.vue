@@ -9,7 +9,7 @@ export default {
       producten: producten,
       selectedPriceFilter: "",
       selectedColorFilter: "",
-      itemsPerPage: 6,
+      itemsPerPage: 8,
       currentPage: 0
     };
   },
@@ -81,7 +81,7 @@ export default {
         </select>
         <button @click="clearPriceFilter">Clear price filter</button>
       </div>
-      <!-- color filter ex: blue -->
+
       <div v-if="selectedPriceFilter">
         <select v-model="selectedColorFilter">
           <option v-for="filter in colorFilter" :value="filter">

@@ -1,4 +1,4 @@
-<script>
+<script >
 import Header from "@/components/Header.vue";
 
 export default {
@@ -25,7 +25,7 @@ export default {
   <div class="new">
     <h1>EMPIRIAL TIE FIGHTER</h1>
     <p>fast, agile, deadly</p>
-    <router-link to="/products"><button>shop now</button></router-link>
+    <router-link :to="'/products'"><button>shop now</button></router-link>
   </div>
   <div class="topnew">
     <h2>// NEW //</h2>
@@ -42,17 +42,17 @@ export default {
     <div class="primate">
       <h1>Luxury Transport</h1>
       <p>Relax and enjoy.</p>
-      <button>shop now</button>
+      <router-link :to="'/products'"><button>shop now</button></router-link>
     </div>
     <div class="cruisers">
       <h1>Blackmatter</h1>
       <p>Worth it.</p>
-      <a href="/products"><button>shop now</button></a>
+      <router-link :to="'/products'"><button>shop now</button></router-link>
     </div>
     <div class="parts">
       <h1>Parts</h1>
       <p>Need extras?</p>
-      <a href="/products"><button>shop now</button></a>
+      <router-link :to="'/:notFound(.*)'" ><button>shop now</button></router-link>
     </div>
   </div>
 </template>

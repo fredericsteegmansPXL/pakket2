@@ -9,12 +9,11 @@ const spaceShipStore = useSpaceShipStore();
 const { getProductsInCart, totalPrice } = storeToRefs(spaceShipStore);
 
 console.log("getProductsInCart", getProductsInCart.value);
-// get all the titles example
+
 const names = getProductsInCart.value.map((product) => ({
   name: product.titel
 }));
 
-// example reroute on not logged in
 const auth = useAuthStore();
 const router = useRouter();
 if (!auth.loggedIn) {
@@ -26,24 +25,26 @@ if (!auth.loggedIn) {
   <main>
     <div class="cart">
       <div class="inhoud">
-        <div class="product" v-for="product in getProductsInCart">
-          <p>{{ product.amount }} x</p>
-          <img :src="product.afbeelding" style="height: 100px" />
-          <div>
-            <h3>Name:</h3>
-            <p>{{ product.titel }}</p>
-          </div>
-          <div>
-            <h3>Price:</h3>
-            <p>
-              {{ "◊ " + product.prijs }}
-            </p>
-          </div>
-          <div>
-            <button @click="spaceShipStore.addToCart(product.id)">+</button>
-            <button @click="spaceShipStore.removeFromCart(product.id)">
-              -
-            </button>
+        <div class="collected">
+          <div class="product" v-for="product in getProductsInCart">
+            <p>{{ product.amount }} x</p>
+            <img :src="product.afbeelding" style="width: 100px" />
+            <div>
+              <h3>Name:</h3>
+              <p>{{ product.titel }}</p>
+            </div>
+            <div>
+              <h3>Price:</h3>
+              <p>
+                {{ "◊ " + product.prijs }}
+              </p>
+            </div>
+            <div>
+              <button @click="spaceShipStore.addToCart(product.id)">+</button>
+              <button @click="spaceShipStore.removeFromCart(product.id)">
+                -
+              </button>
+            </div>
           </div>
         </div>
         <div class="checkout">
@@ -52,11 +53,11 @@ if (!auth.loggedIn) {
               <div class="form-group">
                 <label for="couponCode">Coupon Code:</label>
                 <input
-                  type="text"
-                  id="couponCode"
-                  name="couponCode"
-                  placeholder="Enter your coupon code"
-                  required
+                    type="text"
+                    id="couponCode"
+                    name="couponCode"
+                    placeholder="Enter your coupon code"
+                    required
                 />
               </div>
               <button>Apply Coupon</button>
@@ -71,7 +72,7 @@ if (!auth.loggedIn) {
             <div class="counting2">
               <p>◊ 200</p>
               <p>21%</p>
-              <h3>◊ {{ totalPrice * 1.21 }}</h3>
+              <h3>◊ {{ totalPrice * 1.21 + 200}}</h3>
             </div>
           </div>
           <div class="pay">
@@ -87,19 +88,40 @@ if (!auth.loggedIn) {
 @import "@/assets/shared.scss";
 
 .cart {
-  height: 100vh;
+  height: 100%;
   padding: 3rem;
   background-color: $white;
   .inhoud {
-    height: 80%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    .collected {
+      width: 60%;
+    }
+    button {
+      background-color: $bg;
+      color: $white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: solid 2px $bg;
+      margin-right: 1rem;
+
+      &:hover {
+        background-color: $white;
+        color: $bg;
+      }
+    }
     .product {
-      width: 70%;
+      height: fit-content;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: rgba(0, 0, 0, 0.31) solid 1px;
       h3 {
         margin-bottom: 1rem;
       }
@@ -141,7 +163,6 @@ if (!auth.loggedIn) {
         background-color: $bg;
         color: $white;
         padding: 10px 15px;
-        border: none;
         border-radius: 4px;
         cursor: pointer;
         border: solid 2px $bg;
@@ -170,9 +191,17 @@ if (!auth.loggedIn) {
     margin-top: 2rem;
     color: $bg;
   }
+  .counting2 {
+    text-align: right;
+  }
 }
 .pay {
-  text-align: right;
-  padding-right: 2rem;
+  text-align: center;
+
+  button{
+    width: 15rem;
+    height: 3rem;
+    font-size: 17pt;
+  }
 }
 </style>

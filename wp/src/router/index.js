@@ -7,6 +7,7 @@ import ContactView from '@/views/ContactView.vue'
 import FavoriteView from '@/views/FavoriteView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import ProductDetailView from "@/views/ProductDetailView.vue";
+import PageNotFoundView from "@/views/PageNotFoundView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -42,6 +43,10 @@ const router = createRouter({
         {
             path: '/profiel',
             component: ProfileView
+        },
+        {
+            path: '/:notFound(.*)',
+            component: PageNotFoundView
         }
     ]
 })
